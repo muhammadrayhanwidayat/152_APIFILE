@@ -20,7 +20,9 @@ async function createKomik(req, res) {
 
 async function getAllKomik(req, res) {
   try {
-    const result = await komikService.getAllKomik(db);
+    // perbaikan di sini
+    const result = await komikService.getAllKomiks(db);
+
     res.status(200).json({
       success: true,
       data: result,
